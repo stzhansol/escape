@@ -2,24 +2,15 @@
   "permissions": {
     "allow": [
       "Bash(python3 *)",
-      "Skill(update-config)"
+      "Skill(update-config)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(git -C /Users/wemadeplay/projects/ai-game add -f .claude/settings.local.json)",
+      "Bash(git -C /Users/wemadeplay/projects/ai-game commit -m ' *)",
+      "Bash(git -C /Users/wemadeplay/projects/ai-game push)"
     ]
   },
   "enabledPlugins": {
     "harness@harness-marketplace": true
-  },
-  "hooks": {
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "bash \"$(git rev-parse --show-toplevel)/.claude/save_session.sh\"",
-            "timeout": 15,
-            "statusMessage": "히스토리 저장 중..."
-          }
-        ]
-      }
-    ]
   }
 }
