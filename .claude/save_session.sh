@@ -25,6 +25,7 @@ import json, os
 
 path = os.environ['TRANSCRIPT_PATH']
 ti = to = cw = cr = 0
+model = ''
 
 try:
     with open(path) as f:
@@ -35,7 +36,10 @@ try:
             try:
                 obj = json.loads(line)
                 if obj.get('type') == 'assistant':
-                    u = obj.get('message', {}).get('usage', {})
+                    msg = obj.get('message', {})
+                    if not model:
+                        model = msg.get('model', '')
+                    u = msg.get('usage', {})
                     ti += u.get('input_tokens', 0)
                     to += u.get('output_tokens', 0)
                     cw += u.get('cache_creation_input_tokens', 0)
@@ -45,19 +49,17 @@ try:
 except:
     pass
 
-# Sonnet 4.6 API 환산 가격 (참고용, USD per 1M tokens)
-cost = (ti * 3.0 + to * 15.0 + cw * 3.75 + cr * 0.30) / 1_000_000
-print(f'{ti},{to},{cw},{cr},{cost:.4f}')
-" > /tmp/cc_session_cost.txt 2>/dev/null || echo "0,0,0,0,0.0000" > /tmp/cc_session_cost.txt
+print(f'{ti},{to},{cw},{cr},{model}')
+" > /tmp/cc_session_cost.txt 2>/dev/null || echo "0,0,0,0," > /tmp/cc_session_cost.txt
 
 RESULT=$(cat /tmp/cc_session_cost.txt)
 INPUT_TOK=$(echo "$RESULT" | cut -d',' -f1)
 OUTPUT_TOK=$(echo "$RESULT" | cut -d',' -f2)
 CACHE_WRITE=$(echo "$RESULT" | cut -d',' -f3)
 CACHE_READ=$(echo "$RESULT" | cut -d',' -f4)
-COST=$(echo "$RESULT" | cut -d',' -f5)
+MODEL=$(echo "$RESULT" | cut -d',' -f5)
 
-LOG_ENTRY="$(date '+%Y-%m-%d %H:%M:%S') | ${SHORT_ID} | in:${INPUT_TOK} out:${OUTPUT_TOK} cw:${CACHE_WRITE} cr:${CACHE_READ} | \$${COST} | $(basename "$DEST")"
+LOG_ENTRY="$(date '+%Y-%m-%d %H:%M:%S') | ${SHORT_ID} | model:${MODEL} | in:${INPUT_TOK} out:${OUTPUT_TOK} cw:${CACHE_WRITE} cr:${CACHE_READ} | $(basename "$DEST")"
 echo "$LOG_ENTRY" >> "$HISTORY_DIR/cost_log.txt"
 
-echo "{\"systemMessage\": \"💾 히스토리 저장 | 이번 세션 토큰 비용(참고): \$${COST}\"}"
+echo "{\"systemMessage\": \"💾 히스토리 저장 | in:${INPUT_TOK} out:${OUTPUT_TOK} cw:${CACHE_WRITE} cr:${CACHE_READ}\"}"
