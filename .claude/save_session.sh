@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-PROJECT_DIR="/Users/wemadeplay/projects/ai-game"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 HISTORY_DIR="$PROJECT_DIR/_workspace/history"
 
 mkdir -p "$HISTORY_DIR"
