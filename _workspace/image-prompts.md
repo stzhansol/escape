@@ -7,15 +7,15 @@ AI 이미지 생성 도구(Midjourney, DALL-E 3, Stable Diffusion)에 바로 붙
 ## 공통 스타일 블록 (모든 프롬프트에 뒤에 붙일 것)
 
 ```
-2D flat illustration, point-and-click escape room game background,
-Korean office building interior, retro Windows XP era corporate intranet aesthetic,
-muted color palette (off-white #F0EFEA, steel blue #3A5F8A, dark charcoal #2C2C2C),
-fluorescent lighting, tired corporate realism with subtle black comedy undertone,
-pixel-perfect clean lines, no people (empty rooms only),
-16:9 widescreen, game-ready background art
+flat vector illustration, simple 2D game background art,
+clean geometric shapes, minimal detail, no text no letters no signs,
+muted desaturated color palette, solid color fills, no gradients,
+empty room no characters, point-and-click adventure game style,
+16:9 widescreen
 ```
 
-> 이 블록을 각 프롬프트 끝에 붙이면 씬 간 일관성이 유지됩니다.
+> **핵심 변경:** `no text no letters no signs` 로 한글 깨짐 방지.  
+> `flat vector` + `simple geometric` + `solid color fills` 로 사진 느낌 제거.
 
 ---
 
@@ -26,16 +26,14 @@ pixel-perfect clean lines, no people (empty rooms only),
 ### 1. 사무실 (office) — 메인 씬
 
 ```
-Korean corporate open office, rows of identical gray desks with CRT monitors displaying intranet screens,
-beige partition walls, fluorescent overhead lighting casting even harsh light,
-sticky notes on monitors, paper stacks, a wall clock showing 4:58 PM,
-company notice board on far wall, subtle sense of quiet desperation,
-2D flat illustration, point-and-click escape room game background,
-Korean office building interior, retro Windows XP era corporate intranet aesthetic,
-muted color palette (off-white #F0EFEA, steel blue #3A5F8A, dark charcoal #2C2C2C),
-fluorescent lighting, tired corporate realism with subtle black comedy undertone,
-pixel-perfect clean lines, no people (empty rooms only),
-16:9 widescreen, game-ready background art
+office room interior, rows of gray desks with boxy CRT monitors,
+beige walls with a bulletin board, fluorescent ceiling lights,
+paper stacks on desks, wall clock, no text no letters no signs,
+flat vector illustration, simple 2D game background art,
+clean geometric shapes, minimal detail,
+muted desaturated color palette (off-white beige, steel gray, dark charcoal),
+solid color fills, no gradients, empty room no characters,
+point-and-click adventure game style, 16:9 widescreen
 ```
 
 ---
@@ -43,17 +41,14 @@ pixel-perfect clean lines, no people (empty rooms only),
 ### 2. 회의실 (meeting_room)
 
 ```
-Korean corporate meeting room, long rectangular table with empty chairs,
-whiteboard with illegible handwriting and a schedule grid,
-overhead projector screen (off), cold blue-tinted fluorescent lighting,
-blue accent line along walls, formal and slightly oppressive atmosphere,
-name placards absent — just blank notepads at each seat,
-2D flat illustration, point-and-click escape room game background,
-Korean office building interior, retro Windows XP era corporate intranet aesthetic,
-muted color palette (off-white #F0EFEA, steel blue #3A5F8A, dark charcoal #2C2C2C),
-fluorescent lighting, tired corporate realism with subtle black comedy undertone,
-pixel-perfect clean lines, no people (empty rooms only),
-16:9 widescreen, game-ready background art
+conference room interior, long rectangular table, empty chairs around it,
+blank whiteboard on wall, ceiling projector, cold blue-tinted walls,
+no text no letters no signs,
+flat vector illustration, simple 2D game background art,
+clean geometric shapes, minimal detail,
+muted color palette (cool gray, navy blue, off-white),
+solid color fills, no gradients, empty room no characters,
+point-and-click adventure game style, 16:9 widescreen
 ```
 
 ---
@@ -61,16 +56,14 @@ pixel-perfect clean lines, no people (empty rooms only),
 ### 3. 복사실 (copy_room)
 
 ```
-Small windowless copy room, large industrial photocopier in center with red error LED blinking,
-concrete gray walls, paper sheets scattered on floor, shelf with thick manual binder,
-single flickering fluorescent tube light, dusty and claustrophobic,
-ERROR 404 text faintly visible on copier panel, isolated forgotten corner of office,
-2D flat illustration, point-and-click escape room game background,
-Korean office building interior, retro Windows XP era corporate intranet aesthetic,
-muted color palette (off-white #F0EFEA, steel blue #3A5F8A, dark charcoal #2C2C2C),
-fluorescent lighting, tired corporate realism with subtle black comedy undertone,
-pixel-perfect clean lines, no people (empty rooms only),
-16:9 widescreen, game-ready background art
+small windowless copy room, large boxy photocopier machine in center,
+shelves with binders, papers scattered on floor, single ceiling light,
+no text no letters no signs,
+flat vector illustration, simple 2D game background art,
+clean geometric shapes, minimal detail,
+muted color palette (concrete gray, warm beige, dim white),
+solid color fills, no gradients, empty room no characters,
+point-and-click adventure game style, 16:9 widescreen
 ```
 
 ---
@@ -78,16 +71,15 @@ pixel-perfect clean lines, no people (empty rooms only),
 ### 4. 탕비실 (break_room)
 
 ```
-Korean office break room, warm yellow fluorescent lighting (warmer than other rooms),
-refrigerator against wall, microwave, coffee machine, paper cup dispenser,
-cream-colored walls, inventory sheet pinned to wall, small magnet note on fridge reading a sigh,
-slightly more warm and human than the rest of the office — but still corporate,
-2D flat illustration, point-and-click escape room game background,
-Korean office building interior, retro Windows XP era corporate intranet aesthetic,
-muted color palette (off-white #F0EFEA, warm yellow #D4A017 accent, dark charcoal #2C2C2C),
-fluorescent lighting, tired corporate realism with subtle black comedy undertone,
-pixel-perfect clean lines, no people (empty rooms only),
-16:9 widescreen, game-ready background art
+office break room interior, large refrigerator against wall,
+microwave and coffee machine on counter, paper cup dispenser,
+cream colored walls, warm yellow ceiling light,
+no text no letters no signs,
+flat vector illustration, simple 2D game background art,
+clean geometric shapes, minimal detail,
+muted warm color palette (cream white, warm yellow, gray),
+solid color fills, no gradients, empty room no characters,
+point-and-click adventure game style, 16:9 widescreen
 ```
 
 ---
@@ -95,35 +87,32 @@ pixel-perfect clean lines, no people (empty rooms only),
 ### 5. 비상계단 (hidden_staircase) — 히든 루트
 
 ```
-Emergency stairwell inside corporate building, dark and deserted,
-red emergency light casting low pulse glow, rusty metal door with green exit sign glowing,
-graffiti text on concrete wall, stairs descending into darkness,
-film noir atmosphere, high contrast shadows, golden yellow accent on exit sign only,
-mysterious and tense — this is the way out,
-2D flat illustration, point-and-click escape room game background,
-Korean office building interior, dark film noir mood,
-color palette (near-black #0D0D0D, dark charcoal #2C2C2C, golden yellow #D4A017, emergency red #C0392B),
-dramatic chiaroscuro lighting, no people,
-16:9 widescreen, game-ready background art
+dark emergency stairwell, concrete walls, metal stairs going down,
+green exit sign glowing, single dim red emergency light on ceiling,
+rusty metal door, high contrast shadows,
+no text no letters no signs,
+flat vector illustration, simple 2D game background art,
+clean geometric shapes, minimal detail,
+dark color palette (near black, dark charcoal, amber yellow accent only on exit sign),
+solid color fills, no gradients, empty no characters,
+point-and-click adventure game style, 16:9 widescreen
 ```
 
 ---
 
 ## 엔딩 화면 이미지 (6개)
 
-엔딩 이미지는 배경보다 **분위기 일러스트** 성격. 씬과 톤이 달라도 됩니다.
-
 ---
 
 ### 엔딩 1: 완벽한 직원
 
 ```
-Single office desk bathed in blinding white overexposed light,
-one CRT monitor glowing with tomorrow's 8:50 AM meeting notification on screen,
-everything perfectly ordered — too perfectly — unsettling sterile emptiness,
-no personal items, no warmth, existentially hollow,
-2D flat illustration, high-key overexposed white palette #FFFFFF and #F0EFEA,
-cold corporate dread, minimalist, escape room ending screen art, 16:9
+single office desk with glowing monitor, overexposed white room,
+everything perfectly arranged, sterile and empty, no warmth,
+no text no letters no signs,
+flat vector illustration, simple 2D game art,
+high-key white palette, cold and hollow atmosphere,
+solid color fills, no gradients, 16:9 widescreen
 ```
 
 ---
@@ -131,11 +120,12 @@ cold corporate dread, minimalist, escape room ending screen art, 16:9
 ### 엔딩 2: 정상 퇴근
 
 ```
-Office window at dusk, city skyline outside in deep navy blue evening light,
-empty desk with a bag ready to leave, warm light from outside contrasting cold interior,
-sense of quiet relief and ordinary freedom,
-2D flat illustration, deep navy #1A2A4A sky, soft blue-grey interior,
-bittersweet calm atmosphere, escape room ending screen art, 16:9
+office window at dusk, city buildings outside in dark navy blue sky,
+empty desk with a bag on it, warm light from window,
+no text no letters no signs,
+flat vector illustration, simple 2D game art,
+deep navy and soft warm yellow palette, quiet and calm,
+solid color fills, no gradients, 16:9 widescreen
 ```
 
 ---
@@ -143,11 +133,12 @@ bittersweet calm atmosphere, escape room ending screen art, 16:9
 ### 엔딩 3: 야근
 
 ```
-Dark office at night, all lights off except one glowing monitor,
-clock on wall showing 11:00 PM, cold blue monitor light, no windows visible,
-overwhelming loneliness and exhaustion, the work never ends,
-2D flat illustration, dark charcoal #2C2C2C dominant palette,
-single red blinking element, oppressive and tired, escape room ending screen art, 16:9
+dark office at night, all lights off except one glowing monitor,
+wall clock showing late night, cold blue screen glow,
+no text no letters no signs,
+flat vector illustration, simple 2D game art,
+very dark charcoal palette with single blue light source,
+solid color fills, no gradients, 16:9 widescreen
 ```
 
 ---
@@ -155,11 +146,12 @@ single red blinking element, oppressive and tired, escape room ending screen art
 ### 엔딩 4: 칼퇴 (히든)
 
 ```
-Emergency stairwell door swinging open, warm golden streetlight flooding in from outside,
-dramatic contrast: dark interior vs warm yellow-orange exterior glow,
-sense of liberation and escape, the door was always there,
-2D flat illustration, dark interior with golden light shaft #D4A017,
-hopeful but slightly surreal, escape room hidden ending screen art, 16:9
+emergency stairwell door swinging open, warm golden light flooding in from outside,
+dark interior silhouette, dramatic light shaft,
+no text no letters no signs,
+flat vector illustration, simple 2D game art,
+dark interior with strong amber yellow light beam from door,
+solid color fills, no gradients, 16:9 widescreen
 ```
 
 ---
@@ -167,11 +159,12 @@ hopeful but slightly surreal, escape room hidden ending screen art, 16:9
 ### 엔딩 5: 퇴사 (히든)
 
 ```
-Pure black background, single line of terminal green text centered in frame,
-blinking cursor after the text, nothing else — absolute minimalism,
-feels like a system shutdown, quiet and final,
-2D flat illustration, pure black #0A0A0A background, terminal green #27AE60 text only,
-monospace font aesthetic, hacker terminal visual, escape room hidden ending screen art, 16:9
+pure black background, single blinking green cursor dot centered,
+absolute minimalism, terminal screen aesthetic,
+no text no letters no signs,
+flat vector illustration, simple 2D game art,
+pure black with one small green glowing element,
+solid color fills, 16:9 widescreen
 ```
 
 ---
@@ -179,11 +172,12 @@ monospace font aesthetic, hacker terminal visual, escape room hidden ending scre
 ### 엔딩 6: 회사의 일부
 
 ```
-The exact same office scene as the beginning — desks, monitors, fluorescent lights —
-but now one desk has a name plate with an employee number #008,
-everything unchanged, the loop continues, unsettling normalcy,
-2D flat illustration, identical office palette as main scene,
-subtle horror through sameness, muted grey #8A8F99 tinted, escape room ending screen art, 16:9
+office room interior identical to the beginning, same gray desks same monitors,
+one desk now has a small nameplate object on it, nothing else changed,
+no text no letters no signs,
+flat vector illustration, simple 2D game art,
+same muted office palette as main scene, gray and beige, subtly unsettling,
+solid color fills, no gradients, 16:9 widescreen
 ```
 
 ---
@@ -195,12 +189,12 @@ subtle horror through sameness, muted grey #8A8F99 tinted, escape room ending sc
 ### HUD 상단 바 레퍼런스
 
 ```
-Retro corporate intranet software top navigation bar UI element,
-dark charcoal background #2C2C2C, digital clock showing "오후 5:42",
-horizontal progress bar in steel blue #3A5F8A labeled "퇴근까지 18분",
-three small status icons with numbers on right side,
-Windows XP era design language, Korean office software aesthetic,
-flat 2D UI design, isolated on transparent background, 1920x48px banner
+horizontal UI bar, dark charcoal background, small digital clock icon on left,
+thin progress bar in the center, three small icon slots on right,
+no text no letters no numbers,
+flat vector UI design, simple clean shapes,
+dark gray and steel blue color scheme,
+isolated on transparent background, wide banner format
 ```
 
 ---
@@ -208,12 +202,12 @@ flat 2D UI design, isolated on transparent background, 1920x48px banner
 ### 인벤토리 팝업 레퍼런스
 
 ```
-Retro corporate software popup window, title bar "소지품 목록" in dark navy #1C3557,
-grid of item slots with thick grey borders, beige-white background #F0EFEA,
-item icons in flat monochrome style (folder, key, ID card),
-one slot with golden yellow border #D4A017 indicating hidden item,
-Windows 2000 dialog box design language,
-flat 2D UI element, isolated on transparent background, 560x420px
+popup window UI panel, dark header bar, grid of square item slots below,
+beige-white background, thick gray borders, some slots empty some with simple icons,
+one slot with golden yellow border to indicate special item,
+no text no letters no signs,
+flat vector UI design, retro software window style,
+muted beige and navy color scheme, isolated on transparent background
 ```
 
 ---
@@ -221,19 +215,18 @@ flat 2D UI element, isolated on transparent background, 560x420px
 ### 퍼즐 팝업 프레임 레퍼런스
 
 ```
-Retro Korean government or corporate form document frame,
-double-line border style like official approval documents,
-dark navy header bar with white Korean text, beige interior #F0EFEA,
-bottom action zone with "확인" and "취소" buttons in retro style,
-Windows XP era corporate intranet popup dialog,
-flat 2D UI element, isolated on transparent background, 800x500px
+dialog box UI frame, double-line border style, dark navy header bar,
+beige interior, bottom row with two button shapes,
+no text no letters no signs,
+flat vector UI design, retro corporate software style,
+navy and beige color scheme, isolated on transparent background
 ```
 
 ---
 
 ## 활용 팁
 
-- **Midjourney:** 프롬프트 그대로 사용. `--ar 16:9 --style raw` 추가 권장.
-- **DALL-E 3:** 그대로 붙여넣기. 한글 포함 시 영문 프롬프트만 사용.
-- **Stable Diffusion:** 네거티브 프롬프트 추가 권장: `realistic photo, 3D render, people, characters, anime, bright colors, gradient`
+- **Midjourney:** 프롬프트 그대로 사용. `--ar 16:9 --style raw --no text` 추가 권장.
+- **DALL-E 3:** 그대로 붙여넣기.
+- **Stable Diffusion:** 네거티브 프롬프트 추가: `realistic photo, 3D render, people, text, letters, signs, gradients, complex details, anime`
 - **일관성 유지:** 첫 씬 이미지 생성 후 `--seed` 값 고정하거나 같은 세션에서 연속 생성.
