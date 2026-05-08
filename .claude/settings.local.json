@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 *)",
+      "Skill(update-config)"
+    ]
+  },
+  "enabledPlugins": {
+    "harness@harness-marketplace": true
+  }
+}
