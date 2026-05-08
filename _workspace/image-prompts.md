@@ -224,6 +224,200 @@ navy and beige color scheme, isolated on transparent background
 
 ---
 
+## 오브젝트 클로즈업 이미지 (Examine) — 7개
+
+클릭 시 확대되어 보여지는 오브젝트 이미지. 비율은 4:3 또는 1:1 권장.
+
+> 공통 추가 키워드: `close-up view, centered object, slightly worn and used look`
+
+---
+
+### 컴퓨터 모니터 화면 (사무실 — 퍼즐 1·2·4·5·7·9 공용)
+
+```
+close-up of old boxy CRT computer monitor, screen glowing with simple grid UI layout,
+dark monitor body, screen showing empty rectangular boxes and a cursor,
+slightly dusty surface, centered object,
+no text no letters no signs,
+flat vector illustration, simple 2D game art,
+dark charcoal and steel blue palette, solid color fills, no gradients,
+4:3 ratio
+```
+
+---
+
+### 책상 서랍 내부 (사무실 — 퍼즐 1 단서)
+
+```
+close-up of open desk drawer interior viewed from above,
+folded paper document inside, small envelope, paper clip,
+worn wooden drawer interior, centered view,
+no text no letters no signs,
+flat vector illustration, simple 2D game art,
+warm beige and brown palette, solid color fills, no gradients,
+4:3 ratio
+```
+
+---
+
+### 포스트잇 메모 (사무실 — 퍼즐 4 단서)
+
+```
+close-up of yellow sticky note posted on beige wall,
+blank yellow square, slightly curled corner, small shadow,
+centered object, clean and simple,
+no text no letters no signs,
+flat vector illustration, simple 2D game art,
+yellow and beige palette, solid color fills, no gradients,
+1:1 ratio
+```
+
+---
+
+### 화이트보드 (회의실 — 퍼즐 3)
+
+```
+close-up of office whiteboard, white surface with faint erased marks,
+empty grid lines drawn in dry-erase marker style, marker tray at bottom,
+no text no letters no signs,
+flat vector illustration, simple 2D game art,
+white and light gray palette, solid color fills, no gradients,
+4:3 ratio
+```
+
+---
+
+### 복사기 조작 패널 (복사실 — 퍼즐 6)
+
+```
+close-up of photocopier control panel, several square buttons in a row,
+one small LED indicator light, paper slot visible at bottom edge,
+worn plastic surface, centered view,
+no text no letters no signs,
+flat vector illustration, simple 2D game art,
+light gray and dark charcoal palette, one red glowing dot accent,
+solid color fills, no gradients, 4:3 ratio
+```
+
+---
+
+### 냉장고 뒷면 (탕비실 — 히든 단서)
+
+```
+close-up of back of refrigerator, dusty floor gap between fridge and wall,
+small folded paper note wedged in the gap, dim lighting,
+slightly dark and cramped view, centered,
+no text no letters no signs,
+flat vector illustration, simple 2D game art,
+dark gray and cream palette, amber yellow accent on the note,
+solid color fills, no gradients, 4:3 ratio
+```
+
+---
+
+### 재고표 종이 (탕비실 — 퍼즐 8)
+
+```
+close-up of paper inventory sheet pinned to wall,
+simple table grid drawn on paper, rows and columns with empty cells,
+slightly crumpled paper, pushpin at top corner, centered,
+no text no letters no signs,
+flat vector illustration, simple 2D game art,
+cream white and warm gray palette, solid color fills, no gradients,
+4:3 ratio
+```
+
+---
+
+## 퍼즐 전용 이미지 — 6개
+
+팝업 안에서 퍼즐 콘텐츠로 사용되는 이미지. 비율은 퍼즐 팝업 크기(4:3)에 맞춤.
+
+---
+
+### 퍼즐 2: 메일 목록 화면
+
+```
+close-up of old computer screen showing email inbox list,
+rows of email entries as empty horizontal bars, sender icons as simple circles,
+scrollbar on right side, top bar with folder icons,
+no text no letters no signs,
+flat vector illustration, simple 2D game art,
+dark monitor background with light gray rows, steel blue accents,
+solid color fills, no gradients, 4:3 ratio
+```
+
+---
+
+### 퍼즐 3: 팀원 일정표
+
+```
+weekly schedule grid chart, four rows of colored horizontal bars at different time slots,
+column headers as simple shapes, one time slot highlighted with a circle,
+clean grid lines, no text no letters no signs,
+flat vector illustration, simple 2D game art,
+white background with steel blue and gray bars, solid color fills, no gradients,
+4:3 ratio
+```
+
+---
+
+### 퍼즐 5: 엑셀 스프레드시트
+
+```
+close-up of spreadsheet on monitor screen, grid of cells with empty rectangles,
+column headers as simple letter shapes, one cell highlighted in yellow,
+scrollbar visible on right, dark monitor frame around screen,
+no text no letters no signs,
+flat vector illustration, simple 2D game art,
+white and light gray grid, steel blue highlights, dark monitor border,
+solid color fills, no gradients, 4:3 ratio
+```
+
+---
+
+### 퍼즐 6: 복사기 버튼 배열 (조작 순서 퍼즐)
+
+```
+flat lay of photocopier control panel, five distinct square buttons arranged in a row,
+each button a different shape indicator (triangle, circle, square etc), one glowing green,
+simple icon symbols only, no labels,
+no text no letters no signs,
+flat vector illustration, simple 2D game art,
+light gray panel, buttons in charcoal and steel blue, one green accent button,
+solid color fills, no gradients, 4:3 ratio
+```
+
+---
+
+### 퍼즐 7: 결재 흐름도
+
+```
+approval flow diagram, rectangular boxes connected by arrows pointing downward,
+three boxes in sequence top to bottom, connector lines with arrowheads,
+empty boxes with no labels, organizational chart style,
+no text no letters no signs,
+flat vector illustration, simple 2D game art,
+white background, navy blue boxes and arrows, solid color fills, no gradients,
+4:3 ratio
+```
+
+---
+
+### 퍼즐 8: 탕비실 재고 수량 표
+
+```
+inventory count chart, four rows each with a simple icon on left and bar graph on right,
+bars of different lengths showing quantity, one bar notably shorter than others,
+clean simple chart layout, no labels,
+no text no letters no signs,
+flat vector illustration, simple 2D game art,
+cream white background, steel blue bars with varying lengths,
+solid color fills, no gradients, 4:3 ratio
+```
+
+---
+
 ## 활용 팁
 
 - **Midjourney:** 프롬프트 그대로 사용. `--ar 16:9 --style raw --no text` 추가 권장.
