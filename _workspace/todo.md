@@ -23,7 +23,7 @@
 - [ ] `ClockHUD.tscn` + `.gd` — 헤더 시계 09:00→18:00 + 분침 변경 펄스 (GDD §10.1)
 - [ ] `InventoryHUD.tscn` + `.gd` — 아이템 슬롯·사용 (Control anchor)
 - [ ] `DialogManager.gd` autoload — 시스템 메시지·선택지 공용 팝업
-- [ ] `SceneManager.gd` autoload — `change_scene_to_file` 래퍼 + `consume_time(scene_change)` + 자동 일시정지 핸들러
+- [x] ~~`SceneManager.gd` autoload~~ — `change_scene` 래퍼 + `consume_time(scene_change)` + `_notification` 일시정지 핸들러 + Web `quit_or_main` 분기
 
 ### 인사 평가 기록 화면 (작업 가벼움)
 - [ ] `records.tscn` 자산 3개 생성 (`ui_records_bg`, `ui_records_card_template`, `ui_btn_back`)
@@ -114,8 +114,8 @@
 
 - [ ] 사운드 기획 절 (BGM 톤, SFX 카탈로그, 큐 시스템)
 - [ ] 튜토리얼/온보딩 (첫 진입 시 조작 가이드 흐름)
-- [ ] **엔딩 분기 락인 시점** — 어느 시점에 각 엔딩이 확정되는지 명세
-- [ ] **퍼즐 의존 그래프** 다이어그램 (퍼즐 2 → 3 해금 등 시각화)
+- [x] ~~엔딩 분기 락인 시점~~ — GDD §6.1/§6.2 추가 완료
+- [x] ~~퍼즐 의존 그래프~~ — GDD §4.11/§4.12 추가 완료
 - [ ] 로컬라이제이션 정책 (한국어 전용? 다국어?)
 - [ ] 접근성 (색약 배려, 키보드 only navigation, 폰트 크기 옵션)
 
@@ -123,13 +123,13 @@
 
 ## 🎨 디테일 자산 / 미세 조정 (P3)
 
-- [ ] 사장 마스코트 표정 셋: `disappointed` / `proud` (현재 `idle`만)
+- [x] ~~사장 마스코트 표정 셋: `disappointed` / `proud`~~ — editImage로 파생 (`ceo_mascot_disappointed_v1` / `ceo_mascot_proud_v1`) + idle 호흡 animateSprite 시트(`ceo_mascot_idle_anim_v1`, 16프레임 2048×2048)
 - [ ] 사장 캐릭터 다른 자산 파생: `obj_ceo_poster` 흉상 + `npc_avatar_ceo` 256×256 원형 아바타
 - [ ] 팀장(`npc_team_lead`) 캐릭터 명세 + 자산 (퍼즐 10)
 - [ ] 메일·메신저 발신자 아바타 (작은 원형)
 - [ ] 인벤토리 아이콘 5종 (`item_card_key` 등)
 - [ ] `ui_savefail_banner` 양쪽 swallowtail 단순화 (현재 매니페스트 OK 처리됐으나 옵션)
-- [ ] 메인 메뉴 진입 애니메이션 (Logo 페이드인 / Mascot 우측 슬라이드인 / Buttons 순차 페이드)
+- [x] ~~메인 메뉴 진입 애니메이션~~ — Logo 0.3s 페이드 + Mascot 0.4s 페이드·슬라이드 + Buttons 순차 페이드 + Mascot 호흡 무한 루프
 
 ---
 

@@ -112,4 +112,83 @@ MainMenu (Control, root, anchor full rect)
 
 ---
 
-> 다른 씬(records, office, …)의 ui-layout은 후속 합의 시 추가.
+---
+
+## 2. records.tscn (인사 평가 기록 — 해금 엔딩 목록)
+
+### 2.1 와이어프레임
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  [  인사 평가 기록  ]                                       ┌────────────┐ │
+│   (헤더 라벨, font 48, top:60)                              │  돌아가기  │ │
+│                                                             └────────────┘ │
+│                                                                             │
+│   ┌────────────────────┐    ┌────────────────────┐                          │
+│   │  완벽한 직원        │    │  정상 퇴근          │                          │
+│   │  "내일 08:50…"      │    │  "평범한 저녁…"     │                          │
+│   │   [클리어 시각]     │    │   [클리어 시각]     │                          │
+│   └────────────────────┘    └────────────────────┘                          │
+│                                                                             │
+│   ┌────────────────────┐    ┌────────────────────┐                          │
+│   │  야근                │    │  ???                 │                         │
+│   │  "조금만 더…"        │    │  소소한 반항이…      │                         │
+│   └────────────────────┘    └────────────────────┘                          │
+│                                                                             │
+│   ┌────────────────────┐    ┌────────────────────┐                          │
+│   │  ???                 │    │  ???                 │                         │
+│   │  결재는 우리가…      │    │  지나친 순응의 끝   │                         │
+│   └────────────────────┘    └────────────────────┘                          │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+                                                              배경: ui_records_bg
+```
+
+### 2.2 Control 노드 구조
+
+```
+Records (Control, root, anchor full rect)
+├─ Background (TextureRect, anchor full rect, expand=keep_aspect_covered)
+│   └─ texture = ui_records_bg
+├─ Header (Control, top band)
+│   ├─ offset_top=60, offset_left=80
+│   ├─ TitleLabel (Label, "인사 평가 기록", font 48 Bold)
+│   └─ BtnBack (TextureButton, top-right, size 280×80)
+│       ├─ anchor_left=1, anchor_right=1, offset_left=-360, offset_top=40
+│       ├─ texture_normal = ui_btn_default (공유)
+│       └─ Label ("돌아가기", font 28 Bold)
+└─ CardGrid (GridContainer, columns=2)
+    ├─ anchor center-h, offset_top=200
+    ├─ offset_left=-620, offset_right=620   (1240 wide centered)
+    ├─ theme_override_constants/h_separation=40
+    ├─ theme_override_constants/v_separation=40
+    └─ 6 × Card (Control, custom_minimum_size=580×240)
+        ├─ CardBg (TextureRect, full rect, texture=ui_records_card_template)
+        ├─ NameLabel  (Label, anchor top, font 28 Bold, top:40 left:40)
+        ├─ PreviewLabel (Label, anchor center, font 22 Regular, 본문 영역)
+        └─ MetaLabel (Label, anchor bottom-right, font 18 Regular, "첫 클리어 ____")
+```
+
+### 2.3 카드 데이터 바인딩
+
+- 데이터 소스: `GameState.endings_unlocked` + 엔딩 6종 표 (GDD §6: `id` / `name` / `last_text` / `lock_hint`)
+- 카드 6개는 GDD §6 표 순서대로 (`perfect`, `normal`, `overtime`, `kaltte`, `resign`, `drone`)
+- **해금 카드**: NameLabel = 엔딩 이름, PreviewLabel = `last_text` 미리보기, MetaLabel = `"첫 클리어 {time}"` (현재는 saved_at)
+- **잠금 카드**: NameLabel = `"???"`, PreviewLabel = `lock_hint`, MetaLabel 숨김, 카드 modulate.a = 0.7 (살짝 톤다운)
+- 클릭 동작:
+  - 해금 카드 → AcceptDialog로 last_text 전체를 표시
+  - 잠금 카드 → 잠금 힌트를 한 번 더 강조 표시 (또는 nop)
+
+### 2.4 입력/포커스
+
+- 카드는 클릭 가능 — Control에 mouse_filter=STOP + gui_input 받음, 또는 TextureButton 위에 카드 텍스처 얹기
+- TabFocus 순서: BtnBack → Card[0]..Card[5]
+- ESC 키 = BtnBack과 동일 동작 (main_menu로 복귀)
+
+### 2.5 자산 의존 (`asset-manifest.md` ID)
+
+`ui_records_bg`, `ui_records_card_template`, `ui_btn_back`(=ui_btn_default 공유)
+
+---
+
+> 다른 씬(office, …)의 ui-layout은 후속 합의 시 추가.

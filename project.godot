@@ -25,6 +25,7 @@ config/icon="res://assets/main_menu/ui_title_ceo_mascot.png"
 GameConfig="*res://autoload/GameConfig.gd"
 MessagesDB="*res://autoload/MessagesDB.gd"
 GameState="*res://autoload/GameState.gd"
+SceneManager="*res://autoload/SceneManager.gd"
 
 [display]
 

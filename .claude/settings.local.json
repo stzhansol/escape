@@ -17,7 +17,13 @@
       "Bash(rm -f .godot/imported/ui_title_logo_v1.png-* .godot/imported/ui_title_logo_v2.png-* .godot/imported/ui_title_ceo_mascot_v2.png-* .godot/imported/ui_title_ceo_mascot_v3.png-* .godot/imported/ui_title_ceo_mascot_v4.png-* .godot/imported/ui_savefail_banner_v1.png-*)",
       "Bash(godot --headless --import)",
       "mcp__ludo__removeBackground",
-      "Bash(git *)"
+      "Bash(git *)",
+      "Bash(curl -sSL -o ui_title_ceo_mascot_idle_sheet.webp \"https://storage.googleapis.com/ludo-assets/api/2cde226d42add5a8bec6cdbb4ba53058.webp\")",
+      "Bash(curl -sSL -o ui_title_ceo_mascot_idle_preview.mp4 \"https://storage.googleapis.com/ludo-assets/api/6a75a1f2c598aad54bd5befdb1be2b0e.mp4\")",
+      "Bash(sips -s format png ui_title_ceo_mascot_idle_sheet.webp --out ui_title_ceo_mascot_idle_sheet.png)",
+      "Bash(sips -g pixelWidth -g pixelHeight ui_title_ceo_mascot_idle_sheet.png)",
+      "Bash(ffmpeg -y -i ui_title_ceo_mascot_idle_preview.mp4 -vf \"fps=10,scale=400:-1:flags=lanczos\" ui_title_ceo_mascot_idle_preview.gif)",
+      "Bash(godot --headless --quit-after 180)"
     ]
   },
   "enabledPlugins": {
