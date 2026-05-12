@@ -2,7 +2,22 @@
   "permissions": {
     "allow": [
       "Bash(python3 *)",
-      "Skill(update-config)"
+      "Skill(update-config)",
+      "Bash(curl -sSL -o ui_title_ceo_mascot_v2.webp \"https://storage.googleapis.com/ludo-assets/api/7723104f80545c999a4476b65ffbbd1a.webp\")",
+      "Bash(sips -s format png ui_title_ceo_mascot_v2.webp --out ui_title_ceo_mascot_v2.png)",
+      "Bash(curl -sSL -o ui_title_ceo_mascot_v3.webp \"https://storage.googleapis.com/ludo-assets/api/2158bd754da196a2d41fe935bf081c89.webp\")",
+      "Bash(sips -s format png ui_title_ceo_mascot_v3.webp --out ui_title_ceo_mascot_v3.png)",
+      "mcp__ludo__createImage",
+      "Bash(mkdir -p archive)",
+      "Bash(mv ui_title_ceo_mascot.png ui_title_ceo_mascot.webp archive/ui_title_ceo_mascot_v1.png archive/ui_title_ceo_mascot_v1.webp)",
+      "Bash(mv ui_title_ceo_mascot_v3.png ui_title_ceo_mascot_v3.webp ui_title_ceo_mascot_v4.png ui_title_ceo_mascot_v4.webp archive/)",
+      "Bash(cp ui_title_ceo_mascot_v2.png ui_title_ceo_mascot.png)",
+      "Bash(cp ui_title_ceo_mascot_v2.webp ui_title_ceo_mascot.webp)",
+      "Bash(godot --headless --quit-after 120)",
+      "Bash(rm -f .godot/imported/ui_title_logo_v1.png-* .godot/imported/ui_title_logo_v2.png-* .godot/imported/ui_title_ceo_mascot_v2.png-* .godot/imported/ui_title_ceo_mascot_v3.png-* .godot/imported/ui_title_ceo_mascot_v4.png-* .godot/imported/ui_savefail_banner_v1.png-*)",
+      "Bash(godot --headless --import)",
+      "mcp__ludo__removeBackground",
+      "Bash(git *)"
     ]
   },
   "enabledPlugins": {

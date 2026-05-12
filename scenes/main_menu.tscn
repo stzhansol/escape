@@ -1,0 +1,258 @@
+[gd_scene format=3 uid="uid://b1m4ainmen0c1"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/main_menu/ui_title_bg.png" id="2_bg"]
+[ext_resource type="Texture2D" path="res://assets/main_menu/ui_title_logo.png" id="3_logo"]
+[ext_resource type="Texture2D" path="res://assets/main_menu/ui_title_ceo_mascot.png" id="4_mascot"]
+[ext_resource type="Texture2D" path="res://assets/main_menu/ui_btn_default.png" id="5_btn"]
+[ext_resource type="Texture2D" path="res://assets/main_menu/ui_savefail_banner.png" id="6_banner"]
+[ext_resource type="FontFile" path="res://fonts/Pretendard-Regular.otf" id="7_font_reg"]
+[ext_resource type="FontFile" path="res://fonts/Pretendard-Bold.otf" id="8_font_bold"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bg")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="LogoGroup" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+offset_left = 80.0
+offset_top = 80.0
+offset_right = 720.0
+offset_bottom = 420.0
+
+[node name="TitleLogo" type="TextureRect" parent="LogoGroup"]
+layout_mode = 1
+anchors_preset = -1
+offset_right = 480.0
+offset_bottom = 260.0
+texture = ExtResource("3_logo")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LblCompanyName" type="Label" parent="LogoGroup/TitleLogo"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+offset_left = 160.0
+offset_top = 60.0
+offset_right = 460.0
+offset_bottom = 200.0
+theme_override_colors/font_color = Color(0.18, 0.18, 0.227, 1)
+theme_override_font_sizes/font_size = 48
+theme_override_fonts/font = ExtResource("8_font_bold")
+text = "애니 주식회사"
+horizontal_alignment = 0
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TitleSubLabel" type="Label" parent="LogoGroup"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+offset_top = 280.0
+offset_right = 480.0
+offset_bottom = 340.0
+theme_override_colors/font_color = Color(0.18, 0.18, 0.227, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("7_font_reg")
+text = "퇴근 승인 바랍니다"
+horizontal_alignment = 0
+vertical_alignment = 1
+
+[node name="CeoMascot" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -720.0
+offset_top = -480.0
+offset_right = -80.0
+offset_bottom = 480.0
+texture = ExtResource("4_mascot")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ButtonsColumn" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -290.0
+offset_top = -320.0
+offset_right = 290.0
+offset_bottom = 320.0
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="BtnClockIn" type="TextureButton" parent="ButtonsColumn"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(580, 128)
+layout_mode = 2
+texture_normal = ExtResource("5_btn")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="ButtonsColumn/BtnClockIn"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.18, 0.18, 0.227, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("8_font_bold")
+text = "출근하기"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BtnResume" type="TextureButton" parent="ButtonsColumn"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(580, 128)
+layout_mode = 2
+texture_normal = ExtResource("5_btn")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="ButtonsColumn/BtnResume"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.18, 0.18, 0.227, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("8_font_bold")
+text = "업무 복귀"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BtnRecords" type="TextureButton" parent="ButtonsColumn"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(580, 128)
+layout_mode = 2
+texture_normal = ExtResource("5_btn")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="ButtonsColumn/BtnRecords"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.18, 0.18, 0.227, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("8_font_bold")
+text = "인사 평가 기록"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BtnClockOut" type="TextureButton" parent="ButtonsColumn"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(580, 128)
+layout_mode = 2
+texture_normal = ExtResource("5_btn")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="ButtonsColumn/BtnClockOut"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.18, 0.18, 0.227, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("8_font_bold")
+text = "퇴근하기"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SaveFailBanner" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 64.0
+offset_top = -120.0
+offset_right = -64.0
+offset_bottom = -64.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_1")
+
+[node name="BannerBg" type="TextureRect" parent="SaveFailBanner"]
+layout_mode = 2
+texture = ExtResource("6_banner")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SaveFailLabel" type="Label" parent="SaveFailBanner/BannerBg"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.18, 0.18, 0.227, 1)
+theme_override_font_sizes/font_size = 22
+theme_override_fonts/font = ExtResource("7_font_reg")
+text = "※ 사내 시스템 접근이 차단되어 있습니다. 세션 동안만 진행이 유지됩니다."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WipDialog" type="AcceptDialog" parent="."]
+unique_name_in_owner = true
+title = "[ 사내 알림 ]"
+size = Vector2i(560, 200)
+dialog_text = "해당 기능은 아직 준비 중입니다.
+검토 후 회신드리겠습니다.
+양해 부탁드립니다."
+dialog_autowrap = true
+
+[node name="OverwriteDialog" type="ConfirmationDialog" parent="."]
+unique_name_in_owner = true
+title = "[ 사내 알림 ]"
+size = Vector2i(560, 220)
+dialog_text = "기존 진행 기록이 존재합니다.
+새 게임을 시작하면 기존 기록은 덮어쓰기 처리됩니다.
+계속 진행하시겠습니까?"
+dialog_autowrap = true

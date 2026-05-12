@@ -1,0 +1,19 @@
+# Godot 4.x cache (auto-generated on import)
+.godot/
+
+# Deprecated asset versions kept locally only — see asset-manifest.md notes
+assets/**/archive/
+
+# Builds / exports
+builds/
+exports/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor
+.vscode/
+*.swp
+*~
